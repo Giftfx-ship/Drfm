@@ -28,8 +28,8 @@ body {
   background: linear-gradient(120deg, #8b0000, #d62828, #ffbe0b);
   color: #fff;
   padding-bottom: 60px;
-  animation: fadeDown 1s ease;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  animation: fadeDown 1s ease;
 }
 
 .logo {
@@ -103,7 +103,7 @@ body {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(4px);
 }
 
 .hero::after {
@@ -113,24 +113,21 @@ body {
   left: -50%;
   width: 200%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(255,190,11,0.15), transparent 70%);
+  background: radial-gradient(circle at center, rgba(255,190,11,0.2), transparent 70%);
   animation: shine 10s infinite linear;
 }
 
 .hero-content {
   position: relative;
   flex: 1 1 500px;
-  color: #fff;
-  animation: slideInLeft 1.5s ease;
-  text-shadow: 0 0 8px rgba(255,255,255,0.6), 1px 1px 6px rgba(0,0,0,0.8);
   z-index: 1;
+  text-shadow: 0 0 8px rgba(255,255,255,0.6), 1px 1px 6px rgba(0,0,0,0.8);
+  animation: slideInLeft 1.5s ease;
 }
 
 .hero-content h2 {
-  font-size: 2.8em;
-  color: #fff;
+  font-size: 3em;
   font-weight: 700;
-  letter-spacing: 1px;
   text-transform: uppercase;
   background: linear-gradient(90deg, #ffbe0b, #fff, #ffbe0b);
   -webkit-background-clip: text;
@@ -179,26 +176,28 @@ body {
   transform: translateY(-3px);
 }
 
-.hero-clock {
-  flex: 1 1 300px;
-  position: relative;
-  z-index: 1;
-  animation: slideInRight 1.5s ease;
-}
-
-.clock-card {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-  color: #fff;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 0 15px rgba(255,190,11,0.3);
-}
-
 /* SECTIONS */
 .section {
   padding: 90px 0;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2.3em;
+  font-weight: 700;
+  color: #7b1113;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #ffbe0b;
+  margin: 10px auto 0;
+  border-radius: 5px;
 }
 
 .section.light {
@@ -212,6 +211,28 @@ body {
 
 .section.dark h2 {
   color: #ffbe0b;
+}
+
+/* ABOUT SECTION */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-content img {
+  flex: 1 1 400px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  flex: 1 1 500px;
+  font-size: 1.05em;
+  color: #333;
+  line-height: 1.8;
 }
 
 /* CARD GRID */
@@ -274,95 +295,104 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* LEADER CARD */
-.leader-card {
-  background: #fffaf3;
-  border: 1px solid #f0d9b5;
-  padding: 25px;
-  border-radius: 10px;
-  text-align: center;
-  max-width: 300px;
-  margin: auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+/* CONTACT SECTION */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
 }
 
-.leader-card img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ffbe0b;
-  margin-bottom: 10px;
-}
-
-/* GIVE CARD */
-.give-card {
-  text-align: center;
+.contact-form {
   background: #fff;
-  border: 1px solid #f0d9b5;
-  padding: 25px;
+  padding: 30px;
   border-radius: 10px;
-  max-width: 400px;
-  margin: 20px auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.contact-form button {
+  background: #7b1113;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ffbe0b;
+  color: #7b1113;
+}
+
+.contact-info {
+  color: #333;
+}
+
+.contact-info h3 {
+  color: #7b1113;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 1.05em;
 }
 
 /* FOOTER */
 .footer {
-  background: linear-gradient(135deg, #7b1113, #8b0000);
+  background: linear-gradient(135deg, #7b1113, #8b0000, #7b1113);
   color: #fff;
-  padding: 40px 0 20px;
+  padding: 60px 0 20px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  gap: 40px;
+}
+
+.footer h4 {
+  color: #ffbe0b;
+  margin-bottom: 15px;
+  font-size: 1.2em;
 }
 
 .footer a {
-  color: #ffbe0b;
+  color: #ffeaa7;
   text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  transition: 0.3s;
 }
 
 .footer a:hover {
-  text-decoration: underline;
+  color: #ffbe0b;
   text-shadow: 0 0 8px #ffbe0b;
 }
 
 .footer-bottom {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 20px;
   border-top: 1px solid #ffbe0b;
-  padding-top: 10px;
+  padding-top: 15px;
   font-size: 0.9em;
+  color: #ffeaa7;
 }
 
 /* ANIMATIONS */
-.fade-in { animation: fadeIn 1s ease forwards; }
-.fade-up { animation: fadeUp 1s ease forwards; }
-.slide-in { animation: slideInRight 1.5s ease; }
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-@keyframes fadeUp {
-  from {opacity: 0; transform: translateY(40px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-@keyframes fadeDown {
-  from {opacity: 0; transform: translateY(-40px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-@keyframes slideInLeft {
-  from {opacity: 0; transform: translateX(-40px);}
-  to {opacity: 1; transform: translateX(0);}
-}
-@keyframes slideInRight {
-  from {opacity: 0; transform: translateX(40px);}
-  to {opacity: 1; transform: translateX(0);}
-}
 @keyframes glowText {
   from { text-shadow: 0 0 8px #ffbe0b, 0 0 15px #ffbe0b, 0 0 30px #fff; }
   to { text-shadow: 0 0 20px #ffbe0b, 0 0 40px #fff, 0 0 60px #ffbe0b; }
@@ -371,6 +401,14 @@ body {
   0% { transform: translateX(0); opacity: 0.2; }
   50% { transform: translateX(25%); opacity: 0.4; }
   100% { transform: translateX(50%); opacity: 0.2; }
+}
+@keyframes fadeDown {
+  from {opacity: 0; transform: translateY(-40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes slideInLeft {
+  from {opacity: 0; transform: translateX(-40px);}
+  to {opacity: 1; transform: translateX(0);}
 }
 
 /* RESPONSIVE */
@@ -383,26 +421,18 @@ body {
     text-align: center;
     padding: 10px 0;
   }
-
   .nav-menu.show {
     display: flex;
   }
-
   .menu-btn {
     display: block;
   }
-
   .hero {
     flex-direction: column;
     text-align: center;
     padding: 90px 20px;
   }
-
   .hero-content h2 {
     font-size: 2.2em;
-  }
-
-  .gallery-item {
-    height: 240px;
   }
 }
