@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Divine Reconciliation Faith Ministries — Fire Edition</title>
+  <meta name="description" content="Divine Reconciliation Faith Ministries — Reconciling men to God through faith, worship and service. Sunday 9:00 AM. No.9 Umusedeli, Kwale, Delta State."/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Particle canvas -->
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Nav -->
+  <header class="site-header" id="home">
+    <nav class="nav container">
+      <div class="brand">
+        <img src="logo/logo.svg" alt="Divine Reconciliation Logo" class="logo" />
+        <div class="brand-text">
+          <h1>Divine Reconciliation Faith Ministries</h1>
+          <p class="motto">Reconciling Men to God Through Love &amp; Faith</p>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#vision">Vision &amp; Mission</a></li>
+        <li><a href="#ministries">Ministries</a></li>
+        <li><a href="#testimonies">Testimonies</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#give">Give</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="music-toggle" class="btn ghost" aria-pressed="false" title="Play / Pause background worship music">Play Music</button>
+        <div class="clock-small" id="clock-small" aria-live="polite"></div>
+        <button class="burger" id="burger" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-left">
+        <h2 class="glow-head">Welcome to Divine Reconciliation Faith Ministries</h2>
+        <p class="lead">
+          We are a Holy-Spirit led, Bible-centred family where the presence of God changes destinies. Every Sunday at 
+          <strong>9:00 AM</strong>, we gather in worship and sound teaching to encounter God, restore hope, and build believers for life and ministry.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#about" class="btn">Join Us This Sunday</a>
+          <a href="#give" class="btn outline">Support the Ministry</a>
+        </div>
+
+        <div class="hero-meta">
+          <p class="service"><strong>Service Time:</strong> Sunday • 9:00 AM</p>
+          <p class="address"><strong>Address:</strong> No. 9 Umusedeli, Kwale, Delta State, Nigeria</p>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <h3>Live Clock</h3>
+          <div id="clock" class="clock"></div>
+          <p id="date" class="date"></p>
+        </div>
+
+        <div class="hero-card meta">
+          <h3>Quick Info</h3>
+          <ul>
+            <li><strong>Lead Pastor:</strong> Apostle Gift Nwodu</li>
+            <li><strong>Headquarters:</strong> Kwale, Delta State</li>
+            <li><strong>Contact:</strong> +234 701 399 9936</li>
+            <li><strong>WhatsApp:</strong> +234 916 462 4021</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- About (long) -->
+  <main>
+    <section id="about" class="section container reveal">
+      <h2>About Divine Reconciliation</h2>
+      <p>
+        Divine Reconciliation Faith Ministries began as a small band of faithful worshippers who were hungry for God and
+        committed to seeing lives transformed by the power of the Gospel. Today we are a multi-generational fellowship
+        that prioritizes the presence of God, the preaching of Jesus Christ, and practical demonstrations of God’s love
+        in our city and nation.
+      </p>
+
+      <p>
+        Our weekly services are saturated with passionate praise, fervent prayer, and expository preaching that leads
+        people into a deeper knowledge of the Word. We value discipleship, deliverance, and the equipping of saints for service.
+        We are committed to training leaders, supporting families, and advancing the kingdom through worship and witness.
+      </p>
+
+      <p>
+        We welcome everyone: the seeker, the skeptic, the broken, the joyful — all are invited to taste and see that the Lord is good.
+        Come and experience an atmosphere of love, healing, and powerful ministry that fuels personal and community transformation.
+      </p>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section id="vision" class="section alt container reveal">
+      <h2>Vision &amp; Mission</h2>
+      <div class="two-col">
+        <div>
+          <h3>Vision</h3>
+          <p>
+            To see lives reconciled to God, families restored, and communities transformed. We envision a movement of believers
+            who carry the fire of revival into every sphere of society — homes, schools, markets, and government.
+          </p>
+        </div>
+        <div>
+          <h3>Mission</h3>
+          <ol>
+            <li>Preach the unadulterated Gospel of Jesus Christ, calling people to repentance and faith.</li>
+            <li>Raise disciples who are rooted in Scripture, empowered by the Holy Spirit, and equipped for ministry.</li>
+            <li>Engage in strategic outreach to meet physical and spiritual needs in our community.</li>
+            <li>Train leaders and champions who will steward the church into greater fruitfulness.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beliefs -->
+    <section id="beliefs" class="section container reveal">
+      <h2>What We Believe</h2>
+      <p>
+        We believe in one God — Father, Son and Holy Spirit. We believe in the authority of Scripture, the atoning death and
+        resurrection of Jesus Christ, and the baptism of the Holy Spirit for empowerment to live a holy and fruitful life.
+        We affirm prayer, prophetic ministry, and the exercise of spiritual gifts for the edification of the church.
+      </p>
+      <p>
+        Our doctrine centers on salvation by grace through faith, the sanctifying work of the Spirit, and the expectation of Christ’s return.
+        We are committed to sound teaching and the pursuit of holiness, compassion, justice and mercy.
+      </p>
+    </section>
+
+    <!-- Ministries (long list) -->
+    <section id="ministries" class="section alt container reveal">
+      <h2>Ministries</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Sunday Worship Service</h3>
+          <p>
+            A dynamic, multi-layered worship experience every Sunday by 9:00 AM: congregational worship, choir anthems, ministry
+            time, and anointed preaching. Families and children are well catered for with heartwarming programmes.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Midweek Word & Prayer</h3>
+          <p>
+            A time to dive into the Word and pray in power — a midweek replenishment for believers hungry for growth.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Youth & NextGen</h3>
+          <p>
+            Vibrant sessions designed to disciple and mobilize young people, helping them discover purpose and lead with integrity.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Women of Valor</h3>
+          <p>
+            A fellowship empowering women through teaching, mentorship, and outreach so they can thrive in family and ministry.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Men's Fellowship</h3>
+          <p>
+            Strengthening men to lead in family, church and business with integrity, courage and godly wisdom.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Evangelism & Outreach</h3>
+          <p>
+            Regular outreach programs that bring hope — food distributions, home visits, prison ministry, and community support.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership" class="section container reveal">
+      <h2>Leadership</h2>
+      <div class="leader-grid">
+        <div class="leader-card">
+          <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=6d8b51d86a25f7a3bdc6f38f6d2f5d4c" alt="Apostle Gift Nwodu">
+          <h3>Apostle Gift Nwodu</h3>
+          <p class="title">Lead Pastor</p>
+          <p class="bio">
+            Apostle Gift Nwodu is a passionate apostolic father whose life is marked by prophetic insight, pastoral care, and strategic leadership.
+            He carries a heart for revival, family restoration and raising leaders for global impact.
+          </p>
+        </div>
+
+        <div class="leader-card">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&s=3f6a9be2a1a2b7b6c8b1f02f5b3bc4a1" alt="Ministry Team">
+          <h3>Ministry Team</h3>
+          <p class="title">Elders & Pastors</p>
+          <p class="bio">
+            Anointed ministers and volunteers who steward ministries, lead small groups, teach classes, and serve on the frontlines of outreach.
+            Our team is committed to pastoral care, discipleship and equipping the saints.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonies -->
+    <section id="testimonies" class="section alt container reveal">
+      <h2>Testimonies</h2>
+      <div class="testimonials">
+        <blockquote class="testimonial">
+          “I came broken and hopeless; after several months of prayer and discipleship my marriage was restored. God is real here.” 
+          <cite>— Pastor & Mrs. A.</cite>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          “I received a job offer after the church prayed for me. This place is full of miracles and real people with real testimonies.” 
+          <cite>— Chidimma</cite>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          “They prayed for my health — today I testify to freedom and restoration. The presence of God is tangible.” 
+          <cite>— Brother Emeka</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section container reveal">
+      <h2>Gallery</h2>
+      <p>Photos from worship nights, outreaches, conferences and community outreaches. Replace these placeholders with your real photos in /gallery/ folder.</p>
+
+      <div class="gallery-grid">
+        <div class="img" style="background-image:url('https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=1200&auto=format&fit=crop')"></div>
+        <div class="img" style="background-image:url('https://images.unsplash.com/photo-1520523839897-1d6d81d0a702?q=80&w=1200&auto=format&fit=crop')"></div>
+        <div class="img" style="background-image:url('https://images.unsplash.com/photo-1511174511562-5f7f18b874f6?q=80&w=1200&auto=format&fit=crop')"></div>
+        <div class="img" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop')"></div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section id="events" class="section alt container reveal">
+      <h2>Events & Conference</h2>
+      <p>
+        We run large scale conferences annually, monthly worship nights, and targeted training events for leaders and youth.
+        Our events are designed to ignite fire, equip believers and release purpose.
+      </p>
+
+      <ul class="events-list">
+        <li><strong>Victory Night</strong> — Nov 15 — 7:00 PM — Theme: Walls Must Fall</li>
+        <li><strong>Youth Fire Conference</strong> — Dec 3 — Main Auditorium</li>
+        <li><strong>Christmas Love Feast</strong> — Dec 23 — Celebration & Gift Outreach</li>
+      </ul>
+    </section>
+
+    <!-- Giving / Donations -->
+    <section id="give" class="section container reveal">
+      <h2>Support &amp; Giving</h2>
+      <p>
+        Thank you for partnering with Divine Reconciliation Faith Ministries. Your giving helps support outreach, feed the hungry,
+        fund youth programs, and keep the church running so more lives are reached. Give with a joyful heart — every gift counts.
+      </p>
+
+      <div class="give-grid">
+        <div class="give-card">
+          <h3>Bank Transfer</h3>
+          <p><strong>Bank:</strong> Keystone Bank</p>
+          <p><strong>Account Name:</strong> Nkemalolam Gift</p>
+          <p><strong>Account Number:</strong> 6011333720</p>
+          <p class="note">Use the reference: <em>GIVE • <span id="give-year"></span></em></p>
+        </div>
+
+        <div class="give-card">
+          <h3>Other Ways</h3>
+          <ul>
+            <li>Visit our church office at No. 9 Umusedeli, Kwale — we accept cash and checks.</li>
+            <li>Contact our finance team on WhatsApp: +234 916 462 4021</li>
+            <li>For large gifts or partnerships, email: ogbomosocollegeofnursingsc@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section alt container reveal">
+      <h2>Contact & Visit</h2>
+      <p>
+        We welcome you to visit our headquarters for fellowship, prayer, and ministry. The church is open for counsel and
+        pastoral care throughout the week. Come expecting a move of God — we are ready to pray with you.
+      </p>
+
+      <div class="contact-grid">
+        <div>
+          <h3>Headquarters</h3>
+          <p>No. 9 Umusedeli, Kwale, Delta State, Nigeria</p>
+          <p>Service: Sunday • 9:00 AM</p>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p>Phone: +234 701 399 9936</p>
+          <p>WhatsApp: +234 916 462 4021</p>
+          <p>Email: ogbomosocollegeofnursingsc@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="contact-cta">
+        <a href="https://www.facebook.com/share/g/1AxuTVmdHg/?mibextid=wwXIfr" class="btn outline">Visit our Facebook Page</a>
+        <a href="#give" class="btn">Partner With Us</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Divine Reconciliation Faith Ministries</h4>
+        <p>No. 9 Umusedeli, Kwale, Delta State — Sunday Service 9:00 AM</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#ministries">Ministries</a></li>
+          <li><a href="#give">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bank</h4>
+        <p>Keystone Bank — Account: Nkemalolam Gift</p>
+        <p>Account No: 6011333720</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <small>© <span id="year-footer"></span> Divine Reconciliation Faith Ministries. Developed by Mr Dev • 2349164624021</small>
+    </div>
+  </footer>
+
+  <!-- Background audio (optional) -->
+  <audio id="bg-music" loop preload="none" src=""></audio>
+  <!-- Note: You can set `src` to your hosted mp3 (or place file in /public/ and set path). It's empty here to avoid autoplay issues. -->
+
+  <script src="script.js"></script>
+</body>
+</html>
