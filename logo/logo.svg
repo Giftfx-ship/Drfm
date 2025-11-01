@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b67a4"/>
+    <!-- Red–Gold Gradient -->
+    <linearGradient id="fireGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b30000"/>
+      <stop offset="50%" stop-color="#e50914"/>
       <stop offset="100%" stop-color="#ffb703"/>
     </linearGradient>
+
+    <!-- Glow filter -->
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
@@ -12,30 +16,47 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
+    <!-- Animated shine -->
+    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="shineMask">
+      <rect x="0" y="0" width="500" height="500" fill="url(#shine)">
+        <animate attributeName="x" from="-500" to="500" dur="4s" repeatCount="indefinite"/>
+      </rect>
+    </mask>
   </defs>
 
-  <!-- Glowing circle background -->
-  <circle cx="250" cy="250" r="230" fill="url(#grad)" filter="url(#glow)" opacity="0.9"/>
+  <!-- Glowing circle -->
+  <circle cx="250" cy="250" r="200" fill="url(#fireGradient)" filter="url(#glow)" opacity="0.9"/>
 
   <!-- Cross -->
-  <rect x="235" y="120" width="30" height="180" fill="#fff" rx="10"/>
-  <rect x="190" y="190" width="120" height="30" fill="#fff" rx="10"/>
+  <rect x="235" y="130" width="30" height="190" fill="#fff" rx="8"/>
+  <rect x="180" y="200" width="140" height="30" fill="#fff" rx="8"/>
 
-  <!-- Dove shape (abstract wings) -->
-  <path d="M250,230 
-           c60,30 80,70 40,110
-           c-25,25 -70,25 -100,-10
-           c-25,-25 -20,-55 5,-85
-           c20,-25 30,-30 55,-15z"
-        fill="url(#grad)" opacity="0.8" />
+  <!-- Flame inside the cross -->
+  <path d="M250,270 
+           c30,30 40,70 0,110 
+           c-25,25 -70,20 -90,-15 
+           c-15,-25 -5,-55 15,-75 
+           c20,-20 40,-25 75,-20z"
+        fill="url(#fireGradient)" opacity="0.85" filter="url(#glow)"/>
 
-  <!-- Church name -->
-  <text x="50%" y="410" text-anchor="middle" font-family="Poppins, sans-serif" font-size="28" fill="#fff" font-weight="bold" filter="url(#glow)">
+  <!-- Text -->
+  <text x="50%" y="420" text-anchor="middle" font-family="Poppins, sans-serif"
+        font-size="28" fill="#fff" font-weight="bold" filter="url(#glow)">
     DIVINE RECONCILIATION FAITH MINISTRIES
   </text>
 
   <!-- Motto -->
-  <text x="50%" y="445" text-anchor="middle" font-family="Poppins, sans-serif" font-size="18" fill="#ffb703" opacity="0.9">
-    where love lead
+  <text x="50%" y="455" text-anchor="middle" font-family="Poppins, sans-serif"
+        font-size="18" fill="#ffb703" opacity="0.9">
+    Reconciling Men to God
   </text>
+
+  <!-- Moving shine overlay -->
+  <rect x="0" y="0" width="500" height="500" fill="url(#shine)" mask="url(#shineMask)" opacity="0.25"/>
 </svg>
