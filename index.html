@@ -1,123 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Divine Reconciliation Faith Ministries</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Divine Reconciliation Faith Ministries — Where Love Leads</title>
+  <meta name="description" content="Divine Reconciliation Faith Ministries — Where Love Leads. Sunday 9:00 AM. No.9 Umusedeli, Kwale, Delta State."/>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="top-bar">
-      <div id="datetime"></div>
-    </div>
+  <!-- Background Canvas -->
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
 
-    <div class="logo-area fade-in">
-      <img src="logo/logo.svg" alt="Divine Reconciliation Faith Ministries Logo" class="main-logo glow">
-      <h1 class="slide-down">Divine Reconciliation Faith Ministries</h1>
-      <p class="motto fade-in-delay">Reconciling Men to God Through Faith and Love</p>
-    </div>
+  <!-- Header & Nav -->
+  <header class="site-header" id="home">
+    <nav class="nav container">
+      <div class="brand">
+        <img src="logo/logo.png" alt="Divine Reconciliation Logo" class="logo" />
+        <div class="brand-text">
+          <h1>Divine Reconciliation Faith Ministries</h1>
+          <p class="motto">“Where Love Leads”</p>
+          <p class="verse">“And now abide faith, hope, love, these three; but the greatest of these is love.” — <em>1 Corinthians 13:13</em></p>
+        </div>
+      </div>
 
-    <nav class="slide-up">
       <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#vision">Vision</a></li>
+        <li><a href="#vision">Vision &amp; Mission</a></li>
         <li><a href="#ministries">Ministries</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#activity">Activity</a></li>
-        <li><a href="#worship">Worship With Us</a></li>
-        <li><a href="#giving">Giving</a></li>
+        <li><a href="#give">Give</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <div class="nav-actions">
+        <div class="clock-small" id="clock-small" aria-live="polite"></div>
+        <button class="burger" id="burger" aria-label="Open menu">☰</button>
+      </div>
     </nav>
+
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-left">
+        <h2 class="glow-head">Welcome to Divine Reconciliation Faith Ministries</h2>
+        <p class="lead">
+          We are a Holy-Spirit-led, Bible-centered family where the love of Christ transforms destinies.  
+          Every Sunday at <strong>9:00 AM</strong>, we gather to worship, learn, and grow in the Word of God.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#about" class="btn">Join Us This Sunday</a>
+          <a href="#give" class="btn outline">Support the Ministry</a>
+        </div>
+
+        <div class="hero-meta">
+          <p class="service"><strong>Service Time:</strong> Sunday • 9:00 AM</p>
+          <p class="address"><strong>Address:</strong> No. 9 Umusedeli, Kwale, Delta State, Nigeria</p>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <h3>Live Clock</h3>
+          <div id="clock" class="clock"></div>
+          <p id="date" class="date"></p>
+        </div>
+
+        <div class="hero-card meta">
+          <h3>Quick Info</h3>
+          <ul>
+            <li><strong>Lead Pastor:</strong> Apostle Gift Nwodu</li>
+            <li><strong>Headquarters:</strong> Kwale, Delta State</li>
+            <li><strong>Phone:</strong> +234 701 399 9936</li>
+            <li><strong>WhatsApp:</strong> +234 916 462 4021</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </header>
 
-  <section id="about" class="section fade-in">
-    <h2>About Us</h2>
-    <p>
-      Divine Reconciliation Faith Ministries is a living testimony of God's grace and power. 
-      We are called to raise a people of faith, purpose, and righteousness — reconciling men to God through the love of Jesus Christ.  
-      Our focus is on prayer, the Word, and the demonstration of the Spirit.  
-      We believe that in Christ, every life can be renewed and every destiny restored.
-    </p>
-  </section>
+  <!-- MAIN CONTENT -->
+  <main>
+    <section id="about" class="section container reveal">
+      <h2>About Divine Reconciliation</h2>
+      <p>
+        Divine Reconciliation Faith Ministries is a Christ-centered church focused on restoring souls, families, and communities through love and truth.
+        We exist to demonstrate the power of God’s Word and to raise people who walk in righteousness, grace, and compassion.
+      </p>
+      <p>
+        Our services are filled with worship, prayer, and powerful teaching from Scripture — leading believers to spiritual maturity and purpose.
+        We believe in transformation, discipleship, and reconciliation through the love of Christ.
+      </p>
+    </section>
 
-  <section id="vision" class="section alt slide-up">
-    <h2>Our Vision & Mission</h2>
-    <p><strong>Vision:</strong> To reconcile men to God through faith and love, raising believers who reflect Christ in character and power.</p>
-    <p><strong>Mission:</strong> To evangelize the world, empower the saints, and equip the body of Christ for the work of ministry through sound doctrine and the leading of the Holy Spirit.</p>
-  </section>
+    <section id="vision" class="section alt container reveal">
+      <h2>Vision &amp; Mission</h2>
+      <div class="two-col">
+        <div>
+          <h3>Vision</h3>
+          <p>To reconcile men to God through faith, love, and the ministry of the Holy Spirit.</p>
+        </div>
+        <div>
+          <h3>Mission</h3>
+          <ul>
+            <li>Preaching the undiluted Word of God.</li>
+            <li>Raising disciples who love and serve in truth.</li>
+            <li>Transforming families and communities through love.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <section id="ministries" class="section fade-in">
-    <h2>Our Ministries</h2>
-    <div class="cards">
-      <div class="card zoom">
-        <h3>Sunday Worship Service</h3>
-        <p>Join us every Sunday at 9:00 AM for a time of vibrant worship, teaching, and fellowship in God’s presence.</p>
+    <!-- Ministries -->
+    <section id="ministries" class="section container reveal">
+      <h2>Our Ministries</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Sunday Worship</h3>
+          <p>Join us every Sunday by 9:00 AM for worship, word, and divine encounters.</p>
+        </article>
+        <article class="card">
+          <h3>Midweek Word & Prayer</h3>
+          <p>Grow in faith every Wednesday as we study the Word and pray in the Spirit.</p>
+        </article>
+        <article class="card">
+          <h3>Youth Fire</h3>
+          <p>Empowering young believers to lead with purpose and passion.</p>
+        </article>
+        <article class="card">
+          <h3>Women of Virtue</h3>
+          <p>Raising godly women to fulfill destiny through teaching, love, and prayer.</p>
+        </article>
       </div>
-      <div class="card zoom">
-        <h3>Prayer & Intercession</h3>
-        <p>Fire-filled intercession every week — standing in the gap for families, the Church, and our nation.</p>
+    </section>
+
+    <!-- Activity of the Month -->
+    <section id="activity" class="section alt container reveal">
+      <h2>Activity of the Month</h2>
+      <p>🎉 <strong>Thanksgiving Service — November 2</strong></p>
+      <p>Join us as we gather in gratitude to worship God for His blessings, mercy, and grace throughout the year.</p>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section container reveal">
+      <h2>Gallery</h2>
+      <p>worship with us.</p>
+      <div class="gallery-grid">
+        <div class="img" style="background-image:url('images/image1.jpg')"></div>
+        <div class="img" style="background-image:url('images/image2.jpg')"></div>
+        <div class="img" style="background-image:url('images/image3.jpg')"></div>
+        <div class="img" style="background-image:url('images/image4.jpg')"></div>
       </div>
-      <div class="card zoom">
-        <h3>Youth Empowerment</h3>
-        <p>Raising a generation of kingdom-minded youths walking in purpose, excellence, and power.</p>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership" class="section alt container reveal">
+      <h2>Leadership</h2>
+      <div class="leader-grid">
+        <div class="leader-card">
+          <img src="images/pastor1.jpg" alt="Apostle Gift Nwodu">
+          <h3>Apostle Gift Nwodu</h3>
+          <p class="title">Lead Pastor</p>
+          <p class="bio">
+            Apostle Gift Nwodu is an anointed minister with a heart for revival, discipleship, and reconciliation.
+            He leads with grace, wisdom, and a burning passion to see lives transformed through God’s love.
+          </p>
+        </div>
       </div>
-      <div class="card zoom">
-        <h3>Outreach & Evangelism</h3>
-        <p>Taking the gospel beyond the walls — to communities, schools, and streets with the love of Christ.</p>
+    </section>
+
+    <!-- Giving -->
+    <section id="give" class="section container reveal">
+      <h2>Support &amp; Giving</h2>
+      <p>Your partnership helps us spread the Gospel, support outreach, and care for the needy. Thank you for giving in love.</p>
+
+      <div class="give-grid">
+        <div class="give-card">
+          <h3>Bank Transfer</h3>
+          <p><strong>Bank:</strong> Keystone Bank</p>
+          <p><strong>Account Name:</strong> Nkemalolam Gift</p>
+          <p><strong>Account Number:</strong> 6011333720</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section alt container reveal">
+      <h2>Contact Us</h2>
+      <p>📍 No. 9 Umusedeli, Kwale, Delta State, Nigeria</p>
+      <p>📞 08060943981 | 💬 WhatsApp: 08060943981</p>
+      <p>📧nwodugift5@gmail.com</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Divine Reconciliation Faith Ministries</h4>
+        <p>No. 9 Umusedeli, Kwale, Delta State — Sunday Service 9:00 AM</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#ministries">Ministries</a></li>
+          <li><a href="#give">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bank Details</h4>
+        <p>Keystone Bank — Account: Nkemalolam Gift</p>
+        <p>Account No: 6011333720</p>
       </div>
     </div>
-  </section>
 
-  <section id="activity" class="section alt fade-in">
-    <h2>Activity of the Month</h2>
-    <p>
-      🌟 <strong>Thanksgiving Service</strong> — Join us on <strong>November 2</strong> for a special service of gratitude and worship.  
-      Come with your heart full of thanksgiving as we return all glory to God for His goodness and faithfulness.
-    </p>
-  </section>
-
-  <section id="worship" class="section fade-in">
-    <h2>Worship With Us</h2>
-    <p>
-      You are warmly invited to worship with us at Divine Reconciliation Faith Ministries.  
-      Each service is an encounter — a moment of transformation, healing, and restoration in the presence of God.  
-      Come experience the Word with power, worship that lifts the spirit, and fellowship that feels like family.
-    </p>
-    <p>
-      <strong>Sunday Service:</strong> 9:00 AM — Main Auditorium  
-      <br><strong>Midweek Service:</strong> Wednesdays at 5:00 PM  
-      <br><strong>Location:</strong> No. 9 Umusedeli, Kwale, Delta State, Nigeria  
-    </p>
-  </section>
-
-  <section id="giving" class="section alt slide-up">
-    <h2>Support the Ministry</h2>
-    <p>
-      Partner with us as we reach the world with the message of reconciliation.  
-      Every seed you sow helps us build lives, spread the gospel, and expand God’s kingdom.
-    </p>
-    <div class="account glow-box">
-      <p><strong>Account Name:</strong> Nkemalolam Gift</p>
-      <p><strong>Bank:</strong> Keystone Bank</p>
-      <p><strong>Account Number:</strong> 6011333720</p>
+    <div class="footer-bottom">
+      <small>© <span id="year-footer"></span> Divine Reconciliation Faith Ministries. Pastored by Apostle Gift Nwodu • Developed by Mr Dev — 2349164624021</small>
     </div>
-  </section>
-
-  <section id="contact" class="section fade-in">
-    <h2>Contact Us</h2>
-    <p>
-      📍 <strong>Address:</strong> No. 9 Umusedeli, Kwale, Delta State, Nigeria  
-      — a place of prayer, worship, and the undiluted Word of God.  
-    </p>
-    <p>
-      📞 <strong>Phone:</strong> 08060943981 | WhatsApp:08060943981  
-      <br>📧 <strong>Email:</strong> nwodugift5@gmail.com
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2025 Divine Reconciliation Faith Ministries | Developed by Gift fx (2349164624021)</p>
   </footer>
 
   <script src="script.js"></script>
