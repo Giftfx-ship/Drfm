@@ -1,6 +1,6 @@
 /* -------------------------------
-   DIVINE RECONCILIATION FAITH MINISTRIES
-   Modern Gold & White Theme
+   REDEMPTION MINISTRIES
+   Premium Gold & White Theme
 ----------------------------------*/
 
 /* RESET */
@@ -13,47 +13,52 @@
 }
 
 body {
-  background: #fff;
+  background: #ffffff;
   color: #222;
-  line-height: 1.6;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* GLOBALS */
+/* -------------------------------
+   GLOBALS
+----------------------------------*/
 .container {
-  width: 90%;
+  width: 92%;
   max-width: 1200px;
   margin: auto;
 }
 
 .section {
-  padding: 80px 0;
+  padding: 90px 0;
 }
 
 .section.light {
-  background: #fafafa;
+  background: linear-gradient(to bottom, #fafafa, #ffffff);
 }
 
 h1, h2, h3, h4 {
   font-weight: 700;
+  letter-spacing: 0.4px;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   color: #b8860b;
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
   text-transform: uppercase;
 }
 
 p {
   font-size: 1rem;
+  color: #333;
 }
 
 /* -------------------------------
    HEADER & NAV
 ----------------------------------*/
 .header {
-  background: rgba(0, 0, 0, 0.5);
+  background: #000;
   position: relative;
   overflow: hidden;
 }
@@ -62,34 +67,33 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
-  flex-wrap: wrap;
+  padding: 18px 0;
 }
 
 .logo-area {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .logo {
   height: 60px;
-  width: auto;
 }
 
 .logo-area h1 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: #fff;
 }
 
 .tagline {
   color: #ffbe0b;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
+/* NAV MENU */
 .nav-menu {
   display: flex;
-  gap: 20px;
+  gap: 22px;
   list-style: none;
 }
 
@@ -97,19 +101,36 @@ p {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
   transition: color 0.3s ease;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ffbe0b;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
 }
 
 .nav-menu a:hover {
   color: #ffbe0b;
 }
 
-/* Mobile menu */
+/* MOBILE NAV */
 .menu-btn {
   display: none;
   background: none;
   border: none;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #fff;
 }
 
@@ -117,28 +138,28 @@ p {
   .menu-btn {
     display: block;
   }
+
   .nav-menu {
     display: none;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.95);
     width: 100%;
+    padding: 20px 0;
     text-align: center;
-    padding: 15px 0;
   }
+
   .nav-menu.show {
     display: flex;
   }
 }
 
 /* -------------------------------
-   HERO SECTION
+   HERO SECTION (ENHANCED)
 ----------------------------------*/
 .hero {
   background: url('images/nurse-bg.jpg') center/cover no-repeat;
-  color: #fff;
-  min-height: 90vh;
+  min-height: 92vh;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -148,49 +169,52 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.85)
+  );
 }
 
 .hero-content {
   position: relative;
-  max-width: 600px;
+  max-width: 620px;
   z-index: 2;
 }
 
 .hero-content h2 {
-  font-size: 3rem;
+  font-size: clamp(2.3rem, 4vw, 3.2rem);
   color: #ffbe0b;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .hero-content .intro {
   font-size: 1.1rem;
-  margin-bottom: 25px;
-  color: #fefefe;
+  color: #f5f5f5;
+  margin-bottom: 30px;
 }
 
+/* BUTTONS */
 .buttons {
   display: flex;
   gap: 15px;
-  margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 .btn {
-  padding: 12px 25px;
-  border-radius: 5px;
-  text-decoration: none;
+  padding: 13px 28px;
+  border-radius: 6px;
   font-weight: 600;
-  transition: 0.3s ease;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .btn.primary {
-  background: #ffbe0b;
+  background: linear-gradient(135deg, #ffbe0b, #d4a017);
   color: #000;
 }
 
 .btn.primary:hover {
   background: #fff;
-  color: #000;
 }
 
 .btn.outline {
@@ -203,81 +227,78 @@ p {
   color: #000;
 }
 
+/* HERO CLOCK */
 .hero-clock {
   position: relative;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 25px;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 30px;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
   text-align: center;
-  color: #fff;
-  backdrop-filter: blur(5px);
 }
 
 .clock-card h3 {
   color: #ffbe0b;
+  margin-bottom: 10px;
 }
 
 /* -------------------------------
-   ABOUT / VISION / MINISTRY
+   CONTENT SECTIONS
 ----------------------------------*/
-.two-cols {
+.two-cols,
+.card-grid,
+.contact-grid,
+.gallery-grid {
   display: grid;
+  gap: 28px;
+}
+
+.two-cols {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
 }
 
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+/* CARDS */
 .card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 25px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
   border-left: 5px solid #ffbe0b;
-  transition: 0.3s ease;
+  transition: all 0.35s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 /* -------------------------------
    GALLERY
 ----------------------------------*/
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
 .gallery-item {
-  height: 280px;
+  height: 300px;
+  border-radius: 14px;
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
-  transition: 0.4s;
 }
 
 .gallery-item::after {
   content: attr(data-title);
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.6);
+  inset: auto 0 0 0;
+  background: rgba(0,0,0,0.65);
   color: #ffbe0b;
+  padding: 12px;
   text-align: center;
-  padding: 10px;
+  font-weight: 600;
   opacity: 0;
-  transition: 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .gallery-item:hover::after {
@@ -285,42 +306,20 @@ p {
 }
 
 .gallery-item:hover {
-  transform: scale(1.03);
-}
-
-/* -------------------------------
-   LEADERSHIP
-----------------------------------*/
-.leader {
-  text-align: center;
-}
-
-.leader-card {
-  max-width: 400px;
-  margin: auto;
-  background: #fff;
-  border-radius: 10px;
-  padding: 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.leader-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  transform: scale(1.04);
 }
 
 /* -------------------------------
    GIVING
 ----------------------------------*/
 .give-card {
-  background: #fffbe6;
+  background: linear-gradient(135deg, #fff9e6, #fff);
   border: 1px solid #ffbe0b;
-  padding: 25px;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 14px;
   text-align: center;
-  max-width: 400px;
-  margin: 20px auto 0;
+  max-width: 420px;
+  margin: 25px auto 0;
 }
 
 .give-card h3 {
@@ -328,69 +327,49 @@ p {
 }
 
 /* -------------------------------
-   CONTACT SECTION (UPGRADED)
+   CONTACT SECTION
 ----------------------------------*/
 .contact-section {
   position: relative;
   background: url('images/prayer-bg.jpg') center/cover no-repeat;
   color: #fff;
-  overflow: hidden;
 }
 
 .contact-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  z-index: 0;
+  background: rgba(0,0,0,0.75);
 }
 
 .contact-container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
 }
 
 .contact-intro {
-  max-width: 600px;
-  margin: 10px auto 40px;
-  font-size: 1.1em;
+  max-width: 620px;
+  margin: 10px auto 45px;
+  font-size: 1.05rem;
   color: #ffeccc;
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-
 .contact-card {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 190, 11, 0.4);
-  border-radius: 10px;
-  padding: 25px;
-  transition: 0.4s ease;
-  backdrop-filter: blur(5px);
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,190,11,0.4);
+  transition: all 0.35s ease;
+  backdrop-filter: blur(8px);
 }
 
 .contact-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 15px rgba(255, 190, 11, 0.4);
-  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.22);
+  box-shadow: 0 10px 25px rgba(255,190,11,0.35);
 }
 
 .contact-card h3 {
-  color: #ffbe0b;
-  margin-bottom: 10px;
-}
-
-.contact-card a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.contact-card a:hover {
-  text-decoration: underline;
   color: #ffbe0b;
 }
 
@@ -398,26 +377,19 @@ p {
    FOOTER
 ----------------------------------*/
 .footer {
-  background: #111;
+  background: #0b0b0b;
   color: #ccc;
-  padding: 40px 0 15px;
-  text-align: center;
+  padding: 45px 0 18px;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 25px;
 }
 
 .footer-grid h4 {
   color: #ffbe0b;
-  margin-bottom: 10px;
-}
-
-.footer-grid ul {
-  list-style: none;
 }
 
 .footer-grid a {
@@ -431,33 +403,28 @@ p {
 
 .footer-bottom {
   border-top: 1px solid #333;
-  padding-top: 10px;
+  margin-top: 20px;
+  padding-top: 12px;
+  text-align: center;
   font-size: 0.9rem;
 }
 
 /* -------------------------------
-   ANIMATIONS
+   ANIMATIONS (SMOOTHER)
 ----------------------------------*/
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s forwards;
-}
-
+.fade-in,
 .fade-up {
   opacity: 0;
-  animation: fadeUp 1.3s forwards;
+  animation: fadeUp 1.2s forwards;
 }
 
-@keyframes fadeInUp {
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-  }
-}
+   }
